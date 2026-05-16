@@ -5,21 +5,21 @@
 class Httpprobe < Formula
   desc "A powerful HTTP API testing tool for defining, running, and validating API tests using YAML or JSON"
   homepage "https://github.com/mrfoh/httpprobe"
-  version "1.3.0"
+  version "1.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.0/httpprobe-v1.3.0_darwin_amd64.tar.gz"
-      sha256 "ac085731a0dcb64f465275ca69844079e362ed15337b89742121324e8f68a995"
+      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.1/httpprobe-v1.3.1_darwin_amd64.tar.gz"
+      sha256 "1f01c3c43635b53e792f3adbca6efe53c750e82c93bc8e7d44fc56dda54ca435"
 
       define_method(:install) do
         bin.install "httpprobe"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.0/httpprobe-v1.3.0_darwin_arm64.tar.gz"
-      sha256 "97665eda94b0c6a554bbf529f27d82fa003568cb56437a15bfaeba2d7420164b"
+      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.1/httpprobe-v1.3.1_darwin_arm64.tar.gz"
+      sha256 "dcf01e11a75bce5b0cb207c769f8c171747ed5713719222440236fcf88ab5bbf"
 
       define_method(:install) do
         bin.install "httpprobe"
@@ -29,15 +29,15 @@ class Httpprobe < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.0/httpprobe-v1.3.0_linux_amd64.tar.gz"
-      sha256 "7b34b10aebbe0790dcb32825e5a6ed97825a1418754e91da8242bf806152de58"
+      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.1/httpprobe-v1.3.1_linux_amd64.tar.gz"
+      sha256 "1c48be84d501772182baf02933bd612bda66a39babf13728d3d7920e0ee66407"
       define_method(:install) do
         bin.install "httpprobe"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.0/httpprobe-v1.3.0_linux_arm64.tar.gz"
-      sha256 "314945c1fdac687cf9aa7a122a280d9caf1a1a142ebdc7e33380c1496d93d3fd"
+      url "https://github.com/mrfoh/httpprobe/releases/download/v1.3.1/httpprobe-v1.3.1_linux_arm64.tar.gz"
+      sha256 "91ea23820334b6181525e25480affda452141ee3c8622dc9317acd7c33f7e4e4"
       define_method(:install) do
         bin.install "httpprobe"
       end
