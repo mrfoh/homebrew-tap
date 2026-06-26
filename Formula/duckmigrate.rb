@@ -5,21 +5,21 @@
 class Duckmigrate < Formula
   desc "Database migrations for DuckDB, as a Go library and a Cobra CLI."
   homepage "https://github.com/mrfoh/duckmigrate"
-  version "1.0.0-rc-6"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0-rc-6/duckmigrate-v1.0.0-rc-6_darwin_amd64.tar.gz"
-      sha256 "42e25652b45eef42dd6665713726c38b63157a0ae1734f2030ae83444cfc446d"
+      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0/duckmigrate-v1.0.0_darwin_amd64.tar.gz"
+      sha256 "fcb9c74e8d8d2ffaeef57a35fe531cc94e58dc37884d35a7879dd44e0a95012f"
 
       define_method(:install) do
         bin.install "duckmigrate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0-rc-6/duckmigrate-v1.0.0-rc-6_darwin_arm64.tar.gz"
-      sha256 "37916e3470046722dbfd69bca9cb4d8daa5d749a9348881634d3e3677c792b75"
+      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0/duckmigrate-v1.0.0_darwin_arm64.tar.gz"
+      sha256 "ef50e9b2c0b0ac8053b46e64570371a3cfef23eeb3404c9d7a4a67958373add8"
 
       define_method(:install) do
         bin.install "duckmigrate"
@@ -29,15 +29,15 @@ class Duckmigrate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0-rc-6/duckmigrate-v1.0.0-rc-6_linux_amd64.tar.gz"
-      sha256 "09f22041c875cad54907bb975bb930ade40b2c88f7f5bc477b29852b5f27d0b9"
+      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0/duckmigrate-v1.0.0_linux_amd64.tar.gz"
+      sha256 "04856c2487330d02b7c62bda23ddb7cae5a46d83799dcc6ef9a3a05aaafa9c5a"
       define_method(:install) do
         bin.install "duckmigrate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0-rc-6/duckmigrate-v1.0.0-rc-6_linux_arm64.tar.gz"
-      sha256 "80b9734531828378b37899bf8b63c2a2cf6705fcd100835625ba822e850a5afa"
+      url "https://github.com/mrfoh/duckmigrate/releases/download/v1.0.0/duckmigrate-v1.0.0_linux_arm64.tar.gz"
+      sha256 "2b4f7b544971b3c911107ecc5220d3653d1313bf692013a0d28542bd5aafa144"
       define_method(:install) do
         bin.install "duckmigrate"
       end
